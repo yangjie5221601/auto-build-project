@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cx</groupId>
+    <artifactId>template-project</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>template-domain</module>
+        <module>template-dao</module>
+        <module>template-web</module>
+        <module>template-common</module>
+        <module>template-rpc</module>
+        <module>template-service</module>
+        <module>template-rest-api</module>
+        <module>template-rpc-api</module>
+    </modules>
+
+
+</project>

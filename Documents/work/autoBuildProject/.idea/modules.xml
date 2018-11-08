@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/auto-build/auto-build.iml" filepath="$PROJECT_DIR$/auto-build/auto-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/autoBuildProject.iml" filepath="$PROJECT_DIR$/.idea/autoBuildProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-project/template-common/template-common.iml" filepath="$PROJECT_DIR$/template-project/template-common/template-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-project/template-dao/template-dao.iml" filepath="$PROJECT_DIR$/template-project/template-dao/template-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-project/template-domain/template-domain.iml" filepath="$PROJECT_DIR$/template-project/template-domain/template-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-project/template-project.iml" filepath="$PROJECT_DIR$/template-project/template-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-project/template-rest-api/template-rest-api.iml" filepath="$PROJECT_DIR$/template-project/template-rest-api/template-rest-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-project/template-rpc/template-rpc.iml" filepath="$PROJECT_DIR$/template-project/template-rpc/template-rpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-project/template-rpc-api/template-rpc-api.iml" filepath="$PROJECT_DIR$/template-project/template-rpc-api/template-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-project/template-service/template-service.iml" filepath="$PROJECT_DIR$/template-project/template-service/template-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-project/template-web/template-web.iml" filepath="$PROJECT_DIR$/template-project/template-web/template-web.iml" />
+    </modules>
+  </component>
+</project>

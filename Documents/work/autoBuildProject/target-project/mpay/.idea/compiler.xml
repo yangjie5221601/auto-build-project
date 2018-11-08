@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mpay-common" />
+        <module name="mpay-dao" />
+        <module name="mpay-domain" />
+        <module name="mpay-rest-api" />
+        <module name="mpay-rpc" />
+        <module name="mpay-rpc-api" />
+        <module name="mpay-service" />
+        <module name="mpay-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mpay" target="1.8" />
+      <module name="mpay-common" target="1.8" />
+      <module name="mpay-dao" target="1.8" />
+      <module name="mpay-domain" target="1.8" />
+      <module name="mpay-rest-api" target="1.8" />
+      <module name="mpay-rpc" target="1.8" />
+      <module name="mpay-rpc-api" target="1.8" />
+      <module name="mpay-service" target="1.8" />
+      <module name="mpay-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="auto-build" />
+        <module name="template-common" />
+        <module name="template-dao" />
+        <module name="template-domain" />
+        <module name="template-rest-api" />
+        <module name="template-rpc" />
+        <module name="template-rpc-api" />
+        <module name="template-service" />
+        <module name="template-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auto-build" target="1.8" />
+      <module name="template-common" target="1.8" />
+      <module name="template-dao" target="1.8" />
+      <module name="template-domain" target="1.8" />
+      <module name="template-project" target="1.8" />
+      <module name="template-rest-api" target="1.8" />
+      <module name="template-rpc" target="1.8" />
+      <module name="template-rpc-api" target="1.8" />
+      <module name="template-service" target="1.8" />
+      <module name="template-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
