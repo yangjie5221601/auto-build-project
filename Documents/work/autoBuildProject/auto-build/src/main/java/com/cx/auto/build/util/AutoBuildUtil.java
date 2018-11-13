@@ -1,5 +1,6 @@
 package com.cx.auto.build.util;
 
+import com.cx.auto.build.model.GeneratorVo;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
@@ -17,90 +18,51 @@ import java.util.regex.Pattern;
 public class AutoBuildUtil {
 	private static final Set<String> ING_FILES = new HashSet<>(Arrays.asList(".impl", ".iml", ".classpath", ".project", ".class"));
 	private static final Set<String> ING_DIR = new HashSet<>(Arrays.asList(".setting", "build", "bin", ".idea", "target", ".git"));
-	private static final String SOURCE_TEMPLATE = "template-project";
-	private static final String TARGET_TEMPLATE = "target-project";
-	private static final String BASE_PACKAGE = "com/guazi";
-	private static final String groupId = "com.guazi";
-	private static final String BASE_PATH = "/Users/yangjie/Documents/work/autoBuildProject";
-	private static final String sourceBasePath = BASE_PATH + File.separator + SOURCE_TEMPLATE;
-	private static final String artifactId = "mpay";
-	private static final String targetBasePath = BASE_PATH + File.separator + TARGET_TEMPLATE + File.separator + artifactId;
-	private static final String sourceBasePath1 = BASE_PATH + File.separator + TARGET_TEMPLATE + File.separator + SOURCE_TEMPLATE;
 	private static final String SRC_GROUP_ID = "com.cx";
 	private static final String SRC_ARTIFACT_ID = "template-project";
+	private static final String SRC_BASE_PACKAGE = "com/cx";
 
-	private static final FilenameFilter fileFilter = (dir, name) -> {
-		if (dir.isDirectory() && ING_DIR.contains(name)) {
-			return false;
-		}
-		if (dir.isFile() && ING_FILES.contains(name)) {
-			return false;
-		}
-		int index = name.lastIndexOf(".");
-		if (index <= -1) {
-			if (ING_FILES.contains(name)) {
-				return false;
-			}
-		}
-		return true;
-	};
-
-	public static void main(String[] args) {
-		//getFileAndDirListFromSourceDir("/Users/yangjie/Documents/work/autoBuildProject");
-		makeDirectoryAndFileByRecursion(sourceBasePath);
-	}
-
-	/**
-	 * 递归方式根据源目录和文件创建目标目录和文件
-	 *
-	 * @param path
-	 */
-	private static void makeDirectoryAndFileByRecursion(String path) {
+	public static void makeDirectoryAndFileByRecursion(GeneratorVo generatorVo, String path) {
 		File[] fileAndDirs = getFileAndDirListFromSourceDir(path);
 		if (null == fileAndDirs) {
 			return;
 		}
 		for (File file : fileAndDirs) {
 			if (file.isDirectory()) {
-				String sourceAbsolutePath = file.getAbsolutePath();
-				String sourceFileName = null;
-				String sourceDirPath = getReplacedSourceDirPath(sourceAbsolutePath, false, sourceFileName);
-				String targetDirPath = getReplacedTargetDirPath(sourceAbsolutePath, sourceDirPath, sourceFileName, false);
+				String sourceDirPath = getReplacedSourceDirPath(file, false);
+				String targetDirPath = getReplacedTargetDirPath(generatorVo, sourceDirPath, file.getName(), false);
 				makeTargetDirectory(targetDirPath);
-				makeDirectoryAndFileByRecursion(sourceDirPath);
+				makeDirectoryAndFileByRecursion(generatorVo, sourceDirPath);
 			} else if (file.isFile()) {
-				String sourceAbsolutePath = file.getAbsolutePath();
-				String sourceFileName = file.getName();
-				String sourceDirPath = getReplacedSourceDirPath(sourceAbsolutePath, true, sourceFileName);
-				String targetDirPath = getReplacedTargetDirPath(sourceAbsolutePath, sourceDirPath, sourceFileName, true);
-				String targetFileName = sourceFileName;
-				makeDirectoryAndFile(sourceDirPath, sourceFileName, targetDirPath, targetFileName);
+				String sourceDirPath = getReplacedSourceDirPath(file, true);
+				String targetDirPath = getReplacedTargetDirPath(generatorVo, sourceDirPath, file.getName(), true);
+				String targetFileName = file.getName();
+				makeDirectoryAndFile(generatorVo, sourceDirPath, file.getName(), targetDirPath, targetFileName);
 			}
 		}
 	}
 
 	/**
-	 * 获取目标目录路径
+	 * 获取目标目录路
 	 *
-	 * @param sourceAbsolutePath
 	 * @param sourceDirPath
 	 * @param sourceFileName
 	 * @param isFile
 	 * @return
 	 */
-	private static String getReplacedTargetDirPath(String sourceAbsolutePath, String sourceDirPath, String sourceFileName, boolean isFile) {
-		String targetDriPath = null;
+	private static String getReplacedTargetDirPath(GeneratorVo vo, String sourceDirPath, String sourceFileName, boolean isFile) {
+		String targetDriPath;
 		/**如果是文件*/
 		if (isFile) {
 			/**如果是读取的是java文件,由于需要根据java文件第一行的包路径来得到最终路径，所以需要单独处理*/
-			if (isJavaFileDir(sourceDirPath)) {
-				targetDriPath = replacedSourceDirPath(sourceDirPath) + File.separator + getPackageDir(sourceDirPath, sourceFileName);
+			if (isJavaFileDir(vo, sourceDirPath)) {
+				targetDriPath = replacedSourceDirPath(vo, sourceDirPath) + File.separator + getPackageDir(vo, sourceDirPath, sourceFileName);
 
 			} else {/**如果是非java文件，则直接根据源路径进行替换后得到目标路径*/
-				targetDriPath = replacedSourceDirPath(sourceDirPath);
+				targetDriPath = replacedSourceDirPath(vo, sourceDirPath);
 			}
 		} else {/**如果是目录*/
-			targetDriPath = replacedSourceDirPath(sourceDirPath);
+			targetDriPath = replacedSourceDirPath(vo, sourceDirPath);
 		}
 		return targetDriPath;
 	}
@@ -112,8 +74,8 @@ public class AutoBuildUtil {
 	 * @param sourceDirPath
 	 * @return
 	 */
-	private static boolean isJavaFileDir(String sourceDirPath) {
-		String regex = sourceBasePath1 + "\\\\(web|service|dao|rpc|domain|common|client|cache)\\\\src\\\\main\\\\java";
+	private static boolean isJavaFileDir(GeneratorVo vo, String sourceDirPath) {
+		String regex = vo.getSourceBasePath1() + "\\\\(web|service|dao|rpc|domain|common|client|cache)\\\\src\\\\main\\\\java";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(sourceDirPath);
 		if (m.find()) {
@@ -122,23 +84,23 @@ public class AutoBuildUtil {
 		return false;
 	}
 
-	private static String replacedSourceDirPath(String sourceDirPath) {
-		String basePackage = StringUtils.isNoneBlank(BASE_PACKAGE) ? BASE_PACKAGE : groupId.replace(".", "/");
+	private static String replacedSourceDirPath(GeneratorVo vo, String sourceDirPath) {
+		String packagePrefix = vo.getGroupId().replace(".", "/");
+		String packageSuffix = vo.getArtifactId().replace("-", "/").replace("_", "/");
 		String result = sourceDirPath
-				.replace(sourceBasePath, targetBasePath).replace("template", artifactId).replace("com/cx", basePackage);
+				.replace(vo.getSourceBasePath(), vo.getTargetBasePath()).replace(SRC_BASE_PACKAGE, packagePrefix).replace("template", vo.getArtifactId());
+		if (result.contains("src/main/java/" + packagePrefix + "/" + vo.getArtifactId())) {
+			int index = result.lastIndexOf(vo.getArtifactId());
+			return result.substring(0, index) + File.separator + packageSuffix + result.substring(index + vo.getArtifactId().length(), result.length());
+		}
 		return result;
 	}
 
-	/**
-	 * 获取源目录路径
-	 *
-	 * @param sourceAbsolutePath
-	 * @param isFile
-	 * @param sourceFileName
-	 * @return
-	 */
-	private static String getReplacedSourceDirPath(String sourceAbsolutePath, boolean isFile, String sourceFileName) {
+
+	private static String getReplacedSourceDirPath(File file, boolean isFile) {
 		String sourceDirPath;
+		String sourceAbsolutePath = file.getAbsolutePath();
+		String sourceFileName = isFile ? file.getName() : null;
 		if (isFile) {
 			sourceDirPath = sourceAbsolutePath.replace(sourceFileName, "");
 		} else {
@@ -155,12 +117,16 @@ public class AutoBuildUtil {
 	 * @param targetDirPath
 	 * @param targetFileName
 	 */
-	private static void makeDirectoryAndFile(String sourceDirPath, String sourceFileName, String targetDirPath, String targetFileName) {
-		String sourceContent = readContentFromSourceFile(sourceDirPath, sourceFileName);
-		String newContent = getReplacedContent(sourceContent);
-		if (makeTargetDirectory(targetDirPath)) {
-			if (makeTargetFile(targetDirPath, targetFileName)) {
-				writeNewContentToTargetFile(targetDirPath, targetFileName, newContent);
+	private static void makeDirectoryAndFile(GeneratorVo vo, String sourceDirPath, String sourceFileName, String targetDirPath, String targetFileName) {
+		int fileNameIndex = sourceFileName.lastIndexOf(".");
+		String fileType = sourceFileName.substring(fileNameIndex + 1, sourceFileName.length());
+		if (!ING_FILES.contains(fileType)) {
+			String sourceContent = readContentFromSourceFile(sourceDirPath, sourceFileName);
+			String newContent = getReplacedContent(vo, sourceContent, sourceFileName);
+			if (makeTargetDirectory(targetDirPath)) {
+				if (makeTargetFile(targetDirPath, targetFileName)) {
+					writeNewContentToTargetFile(targetDirPath, targetFileName, newContent);
+				}
 			}
 		}
 	}
@@ -172,14 +138,14 @@ public class AutoBuildUtil {
 	 * @param sourceFileName
 	 * @return
 	 */
-	private static String getPackageDir(String sourceDirPath, String sourceFileName) {
+	private static String getPackageDir(GeneratorVo vo, String sourceDirPath, String sourceFileName) {
 		String packageDir = null;
 		File file = new File(sourceDirPath + File.separator + sourceFileName);
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(file));
 			String firstLine = br.readLine();
-			packageDir = getReplacedContent(firstLine).replace(".", File.separator).replace("package ", "").replace(";", "");
+			packageDir = getReplacedContent(vo, firstLine, null).replace(".", File.separator).replace("package ", "").replace(";", "");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -193,14 +159,8 @@ public class AutoBuildUtil {
 	}
 
 
-	/**
-	 * 获取文件和目录列表
-	 *
-	 * @param sourceDirPath
-	 * @return
-	 */
-	private static File[] getFileAndDirListFromSourceDir(String sourceDirPath) {
-		File file = new File(sourceDirPath);
+	private static File[] getFileAndDirListFromSourceDir(String path) {
+		File file = new File(path);
 		File[] fileList = file.listFiles();
 		return fileList;
 	}
@@ -257,8 +217,21 @@ public class AutoBuildUtil {
 	 * @param sourceContent
 	 * @return
 	 */
-	private static String getReplacedContent(String sourceContent) {
-		String result = sourceContent.replace(SRC_GROUP_ID, groupId).replace(SRC_ARTIFACT_ID, artifactId).replace("template", artifactId);
+	private static String getReplacedContent(GeneratorVo vo, String sourceContent, String fileName) {
+		String result = null;
+		if (StringUtils.isNotBlank(fileName)) {
+			if (fileName.equals("pom.xml")) {
+				//pom 文件替换 group id
+				result = sourceContent.replace(SRC_GROUP_ID, vo.getGroupId()).replace(SRC_ARTIFACT_ID, vo.getArtifactId()).replace("template", vo.getArtifactId());
+			} else if (fileName.contains(".java") || fileName.contains(".xml")) {
+				//替换java文件
+				String name = vo.getArtifactId().replace("-", ".").replace("_", ".");
+				result = sourceContent.replace(SRC_GROUP_ID, vo.getGroupId()).replace("template", name).replace("{artifactId}", vo.getArtifactId());
+			} else {
+				result = sourceContent;
+			}
+		}
+
 		return result;
 	}
 

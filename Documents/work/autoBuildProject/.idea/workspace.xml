@@ -27,8 +27,8 @@
       <file leaf-file-name="AutoBuildUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/util/AutoBuildUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2052">
-              <caret line="157" column="70" lean-forward="true" selection-start-line="157" selection-start-column="70" selection-end-line="157" selection-end-column="70" />
+            <state relative-caret-position="245">
+              <caret line="230" column="39" selection-start-line="230" selection-start-column="39" selection-end-line="230" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,16 +36,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DateUtil.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-common/src/main/java/com/guazi/common/util/DateUtil.java">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/java/com/cx/template/application/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/java/com/cx/template/App.java">
+      <file leaf-file-name="GeneratorController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/rest/GeneratorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="315">
+              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,6 +65,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -65,9 +76,14 @@
       <find>readContentFromSourceFile</find>
       <find>replacedSourceDirPath</find>
       <find>artifactId</find>
-      <find>getReplacedContent</find>
       <find>&quot;\\&quot;</find>
       <find>Sys</find>
+      <find>BASE_PACKAGE</find>
+      <find>isJavaFileDir</find>
+      <find>getReplacedTargetDirPath</find>
+      <find>getPackageDir</find>
+      <find>getReplacedContent</find>
+      <find>makeDirectoryAndFile</find>
     </findStrings>
     <replaceStrings>
       <replace>File.separator</replace>
@@ -78,12 +94,25 @@
       <list>
         <option value="$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/Util.java" />
         <option value="$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/AutoBuildUtil.java" />
-        <option value="$PROJECT_DIR$/auto-build/pom.xml" />
         <option value="$PROJECT_DIR$/template-project/template-domain/pom.xml" />
         <option value="$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/App.java" />
-        <option value="$PROJECT_DIR$/template-project/pom.xml" />
         <option value="$PROJECT_DIR$/template-project/template-common/src/main/java/com/guazi/common/util/DateUtil.java" />
         <option value="$PROJECT_DIR$/template-project/template-web/src/main/java/com/cx/template/auto/build/App.java" />
+        <option value="$PROJECT_DIR$/template-project/template-web/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/template-project/template-web/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/template-project/template-web/src/main/resources/application-prod.yml" />
+        <option value="$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/enums/ReplaceContent.java" />
+        <option value="$PROJECT_DIR$/auto-build/pom.xml" />
+        <option value="$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/model/GeneratorVo.java" />
+        <option value="$PROJECT_DIR$/template-project/pom.xml" />
+        <option value="$PROJECT_DIR$/template-project/template-web/pom.xml" />
+        <option value="$PROJECT_DIR$/target-project/sofa-mpay/sofa/mpay-web/src/main/java/com/guazi/sofa/mpay/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/template-project/template-web/src/main/java/com/cx/template/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/rest/GeneratorController.java" />
+        <option value="$PROJECT_DIR$/template-project/template-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/template-project/template-dao/src/main/resources/config/mybatis-sql-map-config.xml" />
+        <option value="$PROJECT_DIR$/template-project/template-dao/src/main/resources/config/mybatis.xml" />
+        <option value="$PROJECT_DIR$/template-project/template-web/src/main/java/com/cx/template/application/App.java" />
         <option value="$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/util/AutoBuildUtil.java" />
       </list>
     </option>
@@ -109,7 +138,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="717" />
+    <option name="height" value="716" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -123,11 +152,6 @@
             <path>
               <item name="autoBuildProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="autoBuildProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="autoBuildProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="autoBuildProject" type="462c0819:PsiDirectoryNode" />
-              <item name="template-project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -149,6 +173,15 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cx.template.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/template-project/template-dao/src/main/resources" />
+      <recent name="$PROJECT_DIR$/template-project/template-web/src/main/resources" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -161,7 +194,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AutoBuildUtil">
+  <component name="RunManager" selected="Application.GeneratorController">
     <configuration name="AutoBuildUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cx.auto.build.util.AutoBuildUtil" />
       <module name="auto-build" />
@@ -169,6 +202,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.cx.auto.build.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="GeneratorController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cx.auto.build.rest.GeneratorController" />
+      <module name="auto-build" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cx.auto.build.rest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -228,9 +272,11 @@
     <list>
       <item itemvalue="Application.Util" />
       <item itemvalue="Application.AutoBuildUtil" />
+      <item itemvalue="Application.GeneratorController" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GeneratorController" />
         <item itemvalue="Application.AutoBuildUtil" />
         <item itemvalue="Application.Util" />
       </list>
@@ -248,14 +294,16 @@
       <updated>1541499999561</updated>
       <workItem from="1541500001077" duration="9374000" />
       <workItem from="1541592215793" duration="2683000" />
+      <workItem from="1541731443678" duration="18000" />
+      <workItem from="1542099696165" duration="13741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12057000" />
+    <option name="totallyTimeSpent" value="25816000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="717" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -268,21 +316,22 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3484087" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4647651" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32998326" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32885906" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23115578" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29362416" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27948305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22455573" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32956383" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -290,7 +339,6 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,15 +352,54 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/util/AutoBuildUtil.java</url>
-          <line>260</line>
+          <line>144</line>
           <properties />
-          <option name="timeStamp" value="24" />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/util/AutoBuildUtil.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="25" />
+      <option name="time" value="52" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/java/com/cx/template/application/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-common/src/main/java/com/guazi/common/util/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/util/AutoBuildUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2250">
+          <caret line="157" column="70" lean-forward="true" selection-start-line="157" selection-start-column="70" selection-end-line="157" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/java/com/cx/template/application/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-common/src/main/java/com/guazi/common/util/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/template-project/template-dao/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -336,13 +423,6 @@
     <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/Util.java" />
     <entry file="file://$PROJECT_DIR$/target-project/mpay/template-domain/pom.xml" />
     <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-domain/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/auto-build/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template-project/template-domain/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -350,27 +430,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template-project/template-dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-dao/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template-project/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template-project/template-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/template-project/template-common/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -401,27 +461,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target-project/mpay/template-common/src/main/java/com/guazi/common/util/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/java/com/cx/template/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-web/src/main/java/com/cx/mpay/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target-project/mpay/template-common/src/main/java/com/guazi/common/util/DateUtil.java" />
+    <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-web/src/main/java/com/cx/mpay/App.java" />
     <entry file="file://$PROJECT_DIR$/target-project/mpay/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -429,18 +470,210 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/util/AutoBuildUtil.java">
+    <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-common/src/main/java/com/guazi/common/util/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="157" column="70" lean-forward="true" selection-start-line="157" selection-start-column="70" selection-end-line="157" selection-end-column="70" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/resources/banner.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/resources/application-prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-286" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-web/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-web/src/main/java/com/guazi/mpay/application/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/enums/ReplaceContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="2259" column="23" selection-start-line="2259" selection-start-column="20" selection-end-line="2259" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/model/GeneratorVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target-project/mpay/mpay-common/src/main/java/com/guazi/common/util/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="818" selection-start-line="818" selection-end-line="818" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/io/UnixFileSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="233" column="1" selection-start-line="233" selection-start-column="1" selection-end-line="233" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target-project/sofa-mpay/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target-project/sofa-mpay/sofa/mpay-web/src/main/java/com/guazi/sofa/mpay/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto-build/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/java/com/cx/template/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target-project/sofa-mpay/sofa-mpay-web/src/main/java/com/guazi/sofa/mpay/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-dao/src/main/resources/config/mybatis-sql-map-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target-project/sofa-mpay/sofa-mpay-dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-dao/src/main/resources/config/mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="65" column="71" selection-start-line="65" selection-start-column="71" selection-end-line="65" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target-project/sofa-mpay/sofa-mpay-dao/src/main/resources/config/mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-822" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-project/template-web/src/main/java/com/cx/template/application/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/util/AutoBuildUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="230" column="39" selection-start-line="230" selection-start-column="39" selection-end-line="230" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto-build/src/main/java/com/cx/auto/build/rest/GeneratorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
